@@ -1,0 +1,7 @@
+zapytanie 1: SELECT id, nazwa, opis, cena from podzespoly where cena < 1000
+
+zapytanie 2:select nazwa, opis from podzespoly where producenci_id = 1 and dostepnosc =1
+
+zapytanie 3: select podzespoly.nazwa,producenci.nazwa from podzespoly,producenci where podzespoly.producenci_id=producenci.id
+
+zapytanie 4: UPDATE `producenci` SET `nazwa`='PATRIOT' where producenci.nazwa = 'Patriot'
