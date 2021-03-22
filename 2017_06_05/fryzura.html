@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styl2.css">
+    <title>Usługi fryzjerskie</title>
+</head>
+<body>
+    <div class="lewy-gora">
+        <a href="index.html">
+            <h2>SALON FRYZJERSKI</h2>
+        </a>
+
+        <img src="obraz2.jpg" alt="Czesanie">
+    </div>
+
+    <div class="prawy-gora">
+        <h2>MENU</h2>
+    </div>
+
+    <div class="prawy-srodek">
+        <ol>
+            <li><a href="fryzura.html">Strzyżenie</a></li>
+                <ul>
+                    <li>krótkie</li>
+                    <li>średnie</li>
+                    <li>półdługie</li>
+                    <li>długie</li>
+                </ul>
+            <li>Czesanie</li>
+            <li>Koloryzacja</li>
+        </ol>
+    </div>
+
+    <div class="lewy-dol">
+        <h3>Dziś promocja na strzyżenie włosów</h3>
+            <input type="radio" value="Krótkie" name="promocja" class="promocja" id="krótkie">Krótkie <br />
+            <input type="radio" value="Średnie" name="promocja" class="promocja" id="Średnie">Średnie <br />
+            <input type="radio" value="Półdługie" name="promocja" class="promocja" id="Półdługie">Półdługie <br />
+            <input type="radio" value="Długie" name="promocja" class="promocja" id="Długie">Długie <br />
+            <input type="submit" class="odkryj-promocje" value="Odkryj promocję">
+        <p class="wynik"></p>
+    </div>
+
+    <div class="prawy-dol">
+        <img src="obraz1.jpg" alt="Fryzjer">
+    </div>
+
+    <footer>
+        <p>Autor: 00000000000</p>
+    </footer>
+
+    <script>
+        document.querySelector('.odkryj-promocje').addEventListener('click', () => {
+            const radios = document.querySelectorAll('.promocja');
+            const wynik = document.querySelector('.wynik');
+
+            radios.forEach((radio) => {
+                if (radio.checked) {
+                    switch (radio.value) {
+                        case "Krótkie":
+                            wynik.innerHTML = "Cena strzyżenia: 25";
+                            break;
+                        
+                        case "Średnie":
+                            wynik.innerHTML = "Cena strzyżenia: 30";
+                            break;
+
+                        case "Półdługie":
+                            wynik.innerHTML = "Cena strzyżenia: 40";
+                            break;
+
+                        case "Długie":
+                            wynik.innerHTML = "Cena strzyżenia: 50";
+                            break;
+                        
+                        default:
+                           break;
+                    }
+                }
+            })
+        })
+    </script>
+</body>
+</html>

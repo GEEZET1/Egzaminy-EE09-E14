@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>Dom Weselny</title>
+		<link rel='stylesheet' href='styl5.css'>
+	</head>
+	
+	<body>
+		<div id='baner'>
+			<h1>
+				<img src='logo.png'>
+				Dom Weselny zorganizuje wesele za Ciebie
+				<img src='logo.png'>
+			</h1>
+		</div>
+		
+		<div id='lewy'>
+			<h2>Dom Weselny</h2>
+			<p>ul. Przemysłowa 5</p>
+			<p>Kalisz</p>
+			<a href='logo.png'>Pobierz logo</a>
+		</div>
+		
+		<div id='srodkowy'>
+			<h2>Oferujemy</h2>
+			<ul>
+				<li>Wesela</li>
+				<li>Bankiety</li>
+				<li>Konferencje</li>
+			</ul>
+		</div>
+		
+		<div id='prawy'>
+			<p><a href='Regulamin.txt'>Czytaj regulamin</a></p>
+		</div>
+		
+		<div id='dolny'>
+			<h2>Ile będzie kosztowało moje wesele?</h2>
+			Podaj liczbe gości: <input type='number' id='goscie'/></br>
+			<input type='checkbox' id='poprawiny'/>Wesele z poprawinami?</br>
+			<button onClick='Oblicz()'>Oblicz koszt</button></br>
+			<p id='koszt'></p>
+			<script>
+				function Oblicz()
+				{
+					var goscie=parseInt(document.getElementById('goscie').value);
+					var poprawiny=document.getElementById('poprawiny').checked;
+					var koszt=0;
+					
+					if (poprawiny == false){
+						koszt = goscie*100;
+					}
+					else {
+						koszt=(goscie*100)*1.30;
+					}
+					
+					
+					if (isNaN(goscie)) {
+						document.getElementById('koszt').innerHTML = 'Nie podano liczby gości';
+					}
+					else {
+						document.getElementById('koszt').innerHTML = 'Koszt Twojego wesela to '+koszt +' złotych';
+					}
+				}
+			</script>
+		</div>
+		
+		<div id='stopka'>
+			Stronę internetową opracował <i>00000000000</i>
+		</div>
+	</body>
+</html>

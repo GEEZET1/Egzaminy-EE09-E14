@@ -1,0 +1,8 @@
+zapytanie 1: INSERT INTO `rezerwacje`(`nr_stolika`, `data_rez`, `liczba_osob`, `telefon`) VALUES (1,"2017-07-04",4,111222333)
+
+zapytanie 2: select nazwa from dania where typ=2
+
+zapytanie 3: SELECT nazwa from dania where typ=3 and cena <= 15
+
+
+zapytanie 4: UPDATE `pracownicy` SET `stanowisko`=4 WHERE stanowisko=3

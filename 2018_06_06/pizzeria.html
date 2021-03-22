@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>Pizzeria Margherita</title>
+		<link rel='Stylesheet' href='styl6.css'>
+	</head>
+	<body>
+		<div id='baner'>
+			<h2>Najlepsza pizza w mieście
+			<img src='logo.png' height='100px'></h2>
+		</div>
+		
+		<div id='lewy'>
+			<p>U nas zamówisz pizzę z dowozem</p>
+			<a href='logo.png'>Nasze logo</a>
+		</div>
+		
+		<div id='srodek'>
+			<h3>Pizzeria Marghertia</h3>
+			<p>ul. Botaniczna4, Zielona Góra</p>
+		</div>
+		
+		<div id='prawy'>
+			<h3>Oferta</h3>
+			<ol>
+				<li>Pizza</li>
+				<li>Lasagne</li>
+				<li>Sałatki</li>
+			</ol>
+			<p id='oferta'>Pobierz pełną ofertę</p>
+		</div>
+		
+		<div id='dolny'>
+			<h3>Oblicz koszt dostawy</h3>
+			<form>
+			<input type='checkbox' id='zg'> Jestem z Zielonej Góry
+			<p>albo</p>
+			Podaj liczbę kilometrów od Zielonej Góry <input type='number' id='km'></br>
+			<input type='button' value='Oblicz' onclick='Oblicz()'>
+			</form>
+			<p id='wynik'></p>
+			<script>
+				function Oblicz(){
+					var liczba=document.getElementById('km').value;
+					var stan=document.getElementById('zg').checked;
+					
+					if (stan == true){
+						document.getElementById('wynik').innerHTML='Dowieziemy Twoją pizzę za darmo';}
+					else {
+						var koszt = (liczba * 2);
+						document.getElementById('wynik').innerHTML='Dowóz będzie Cię kosztował ' + koszt + ' złotych';}
+				}
+			</script>
+		</div>
+		
+		<div id='stopka'>
+			Stronę internetową opracował: 00000000000
+		</div>
+	</body>
+<html>
