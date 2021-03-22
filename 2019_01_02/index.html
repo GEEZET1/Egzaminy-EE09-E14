@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Formatowanie</title>
+    <link rel="Stylesheet" href="style2.css">
+</head>
+<body>
+    <main>
+        <div class="baner">
+            <h1>Formatowanie dokumentów HTML</h1>
+        </div>
+
+        <div class="panel-gorny-pierwszy">
+            <h2>Przykład listy - hobby</h2>
+            <ul>
+                <li>muzyka</li>
+                <li>turystyka</li>
+                <ol>
+                    <li>góry</li>
+                    <li>jeziora</li>
+                    <li>na rowerze</li>
+                </ol>
+                <li>książki</li>
+            </ul>
+        </div>
+
+        <div class="panel-gorny-drugi">
+            <h2>Pryzkład tabeli - rozkład dnia</h2>
+            <table>
+                <thead>
+                    <th>Pora dnia</th><th>obowiązki</th>
+                </thead>
+                <tbody>
+                    <tr><td>rano</td><td>nauka</td></tr>
+                    <tr><td>południe</td><td>zajęcia dodatkowe</td></tr>
+                    <tr><td>popołudnie</td><td rowspan="2">moje hobby</td></tr>
+                    <tr><td>wieczór</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="panel-gorny-trzeci">
+            <img src="./pliki2/tekst.jpg" alt="technologia web">
+        </div>
+
+        <div class="panel-glowny">
+            <p>Podaj rozmiar tekstu w procentach: <input type="number" id="textSize"> %</p>
+
+            <p>
+                <select id="list-select">
+                    <option name="prosty" value="normal">prosty</option>
+                    <option name="kursywa" value="italic">kursywa</option>
+                </select>
+            </p>
+
+            <p>Jakim kolorem sformatować teskst? wybierz przycisk</p>
+
+            <button id="button-red" name="red" onclick="buttonChange(this.name)"></button>
+            <button id="button-green" name="green" onclick="buttonChange(this.name)"> </button>
+            <button id="button-blue" name="blue" onclick="buttonChange(this.name)"></button>
+
+            <p id="textToChange">To jest przykład paragrafu, który może być dowolnie formatowany przez Java Script</p>
+
+            <script src="./app.js"></script>
+        </div>
+    </main>
+
+    <footer>
+        <p>Formatowaniem tekstu zajmował się <i>00000000000</i></p>
+        <a href="formatowanie.pl" target="_blank">Odwiedź także</a>
+    </footer>
+</body>
+</html>

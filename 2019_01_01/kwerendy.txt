@@ -1,0 +1,7 @@
+Zapytanie 1: INSERT INTO `filmy`(`gatunki_id`,`tytul`, `rok`, `ocena`) VALUES (5,"Suburbicon",2017,5)
+
+Zapytanie 2: SELECT filmy.tytul, gatunki.nazwa from gatunki,filmy where filmy.gatunki_id=gatunki.id and filmy.ocena = 6
+
+Zapytanie 3: SELECT filmy.tytul,filmy.rok from gatunki,filmy where filmy.gatunki_id=gatunki.id and filmy.ocena = 5 and filmy.gatunki_id=3
+
+Zapytanie 4: CREATE TABLE `dane`.`aktorzy` (`id` INT(10) NOT NULL,`imie` VARCHAR(100) NULL,`nazwisko` VARCHAR(100) NULL)

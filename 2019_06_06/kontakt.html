@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>Pogotowie komputerowe</title>
+		<link rel='Stylesheet' href='styl.css'>
+		<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+	</head>
+	
+	<body>
+		<div id='container'>
+			<div id='baner'>
+				<img src='animacja.gif'>
+			</div>
+			
+			<div id='menu'>
+				<a href='index.html'>O nas</a>
+				<a href='kontakt.html'>kontakt</a>
+			</div>
+			
+			<div id='srodek'>
+				<h3>Formularz kontaktowy</h3>
+				
+				<table>
+					<tr><td>Imię: </td> <td><input type='text' id='imie'> </td></tr>
+					
+					<tr><td>Nazwisko: </td><td><input type='text' id='nazwisko'></td></th>
+					
+					<tr><td>E-mail: </td><td><input type='text' id='mail'></td></tr>
+					
+					<tr><td>Usługa: </td><td><select id='usluga'>
+					<option name='naprawa'>Naprawa komputera</option>
+					<option name='odzysk'>Odzyskiwanie danych</option>
+					<option name='problem'>Problemy z oprogramowaniem</option>
+					<option name='konfiguracja'>Konfiguracja sieci LAN</option>
+					<option name='inne'>inne</option></select></td></tr>
+					
+					<tr><td></td> <td><input type='checkbox' checked='checked' id='kopia_wiadomosci'> Wyślij kopię wiadomości</td></tr>
+					
+					<tr><td></td> <td><input type='reset' value='Resetuj'id='resetuj'><input type='button' onClick='Przeslij()' id='przeslij'>Prześlij </td></tr>
+				</table>
+				
+				
+				<p id='imie_nazwisko'></p>
+				<p id='email'></p>
+				<p id='usluga_wybrana'></p>
+				
+				<script>
+					function Przeslij()
+					{
+						var imie=document.getElementById('imie').value;
+						var nazwisko=document.getElementById('nazwisko').value;
+						var mail=document.getElementById('mail').value;
+						var usluga=document.getElementById('usluga');
+						var opcja=usluga.options[usluga.selectedIndex].text;
+						
+						document.getElementById('imie_nazwisko').innerHTML = imie + ' ' + nazwisko;
+						
+						document.getElementById('email').innerHTML = mail.toLowerCase();
+						
+						document.getElementById('usluga_wybrana').innerHTML = 'Usługa: ' + opcja;
+					}
+				</script>
+			</div>
+			
+			<div id='stopka'>
+				<p><b>Autor strony: 00000000000</b></p>
+			</div>
+		</div>
+	</body>
+
+</html>

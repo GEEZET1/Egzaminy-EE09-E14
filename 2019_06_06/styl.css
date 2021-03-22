@@ -1,0 +1,19 @@
+html,body{margin: 0px; padding:0px; background-color: #99FFCC}
+
+#baner{background-color: #99FF66; text-align: right; height: 200px;}
+
+#menu{background-color: #66CCFF; text-align: center; padding-top: 20px; padding-bottom: 20px;}
+
+#lewy, #prawy, #srodek{width: 310px; padding: 10px; float: left;}
+
+#stopka{background-color: #66CCFF; color: #006666; text-align: right; height: 30px; padding: 20px; clear: both;}
+
+#menu a{color: #006666; margin: 50px; font-size: 200%; text-decoration: none}
+
+h2, h3{text-align: center}
+
+#resetuj{background-color: #FF0000}
+
+#przeslij{background-color: #00FF00}
+
+#container{width: 1000px; margin:auto}

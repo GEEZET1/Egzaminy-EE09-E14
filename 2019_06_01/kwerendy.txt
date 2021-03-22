@@ -1,0 +1,10 @@
+zapytanie 1: SELECT nazwa, cena FROM `towary` WHERE id <= 4
+
+zapytanie 2: SELECT cena from towary where nazwa = 'cyrkiel'
+
+zapytanie 3: SELECT nazwa from towary
+
+zapytanie 4: SELECT promocja, count(promocja) as 'ilosc' from towary GROUP by towary.promocja
+
+
+
